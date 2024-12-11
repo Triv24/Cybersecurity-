@@ -201,3 +201,23 @@ The security of key systems should not rely on keeping details hidden. Consider 
 
 The security of an application should not rely on keeping the source code secret. Its security should rely upon many other factors, including reasonable password policies, defense in depth, business transaction limits, solid network architecture, and fraud and audit controls.
 
+## Plan A Security Audit :
+- A security audit is a review of an organization's security controls, policies, and procedures against a set of expectations.
+
+- 2 types of security audits:
+   1. External
+   2. Internal :
+       - An internal security audit is typically conducted by a team of people that might include an organization's compliance officer, security manager, and other security team members.
+       - Internal security audits help security teams identify organizational risk, assess controls, and correct compliance issues.
+
+### Common elements of Internal Audits :     
+- establishing the scope and goals of the audit
+- conducting a risk assessment of the organization's assets
+- completing a controls assessment
+- assessing compliance
+- communicating results to stakeholders
+
+1. Scope refers to the specific criteria of an internal security audit.
+   - Scope requires organizations to identify people, assets, policies, procedures, and technologies that might impact an organization's security posture.
+   - Goals are an outline of the organization's security objectives, or what they want to achieve in order to improve their security posture.
+
