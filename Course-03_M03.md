@@ -130,3 +130,26 @@ In this reading you’ll learn about a 2016 DDoS attack against DNS servers that
 - The service provider was hosting the DNS system for these companies.
 - This meant that when internet users typed in the URL of the website they wanted to access, their devices would be directed to the right place.
 - On October 21, 2016, the service provider was the victim of a DDoS attack.
+
+### Leading up to the attack :
+
+- Before the attack on the service provider, a group of university students created a botnet with the intention to attack various gaming servers and networks.
+- A botnet is a collection of computers infected by malware that are under the control of a single threat actor, known as the “bot-herder."
+- Each computer in the botnet can be remotely controlled to send a data packet to a target system.
+- In a botnet attack, cyber criminals instruct all the bots on the botnet to send data packets to the target system at the same time, resulting in a DDoS attack.
+
+- The group of university students posted the code for the botnet online so that it would be accessible to thousands of internet users and authorities wouldn’t be able to trace the botnet back to the students.
+- In doing so, they made it possible for other malicious actors to learn the code to the botnet and control it remotely.
+- This included the cyber criminals who attacked the DNS service provider.
+
+### The day of attack :
+
+- At 7:00 a.m. on the day of the attack, the botnet sent tens of millions of DNS requests to the service provider.
+- This overwhelmed the system and the DNS service shut down.
+- This meant that all of the websites that used the service provider could not be reached.
+- When users tried to access various websites that used the service provider, they were not directed to the website they typed in their browser.
+- Outages for each web service occurred all over North America and Europe. 
+
+- The service provider’s systems were restored after only two hours of downtime.
+- Although the cyber criminals sent subsequent waves of botnet attacks, the DNS company was prepared and able to mitigate the impact.
+
