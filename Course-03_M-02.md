@@ -149,7 +149,8 @@ As a security analyst, you will need to know about many of the protocols and por
 | SMTP | TCP/UDP Port 25 (unencrypted) |
 | SMTPS | TCP/UDP port 587 (encrypted, TLS) |
 
-## Wireless Protocols : 
+# Wireless Protocols : 
+
 #### IEEE 802.11 (WiFi) :
 - A set of standards that define communication for wireless LANs.
 
@@ -239,4 +240,170 @@ In this reading, you will learn about the evolution of wireless security protoco
 - This prevents attackers from downloading data from wireless network connections to their systems to attempt to decode it.
 
 - WPA3 has increased encryption to make passwords more secure  by using 128-bit encryption, with WPA3-Enterprise mode offering optional 192-bit encryption.
+
+# Firewalls ans system identification :
+
+## Subnetting and CIDR :
+- Earlier in this course, you learned about network segmentation, a security technique that divides networks into sections.
+- A private network can be segmented to protect portions of the network from the internet, which is an unsecured global network. 
+
+- For example, you learned about the uncontrolled zone, the controlled zone, the demilitarized zone, and the restricted zone.
+- Creating security zones is one example of a networking strategy called subnetting.
+
+### Overview of subnetting :
+
+- Subnetting is the subdivision of a network into logical groups called subnets.
+- It works like a network inside a network.
+- Subnetting divides up a network address range into smaller subnets within the network.
+- These smaller subnets form based on the IP addresses and network mask of the devices on the network.
+- Subnetting creates a network of devices to function as their own network.
+- This makes the network more efficient and can also be used to create security zones.
+- If devices on the same subnet communicate with each other, the switch changes the transmissions to stay on the same subnet, improving speed and efficiency of the communications.
+
+![image](https://github.com/user-attachments/assets/2e7abfc2-18c3-4a92-90d5-1da2cacff39d)
+
+### Classless Inter-Domain Routing notation for subnetting :
+
+- Classless Inter-Domain Routing (CIDR) is a method of assigning subnet masks to IP addresses to create a subnet.
+- Classless addressing replaces classful addressing.
+- Classful addressing was used in the 1980s as a system of grouping IP addresses into classes (Class A to Class E).
+- Each class included a limited number of IP addresses, which were depleted as the number of devices connecting to the internet outgrew the classful range in the 1990s.
+- Classless CIDR addressing expanded the number of available IPv4 addresses. 
+
+- CIDR allows cybersecurity professionals to segment classful networks into smaller chunks.
+- CIDR IP addresses are formatted like IPv4 addresses, but they include a slash (“/’”) followed by a number at the end of the address, This extra number is called the IP network prefix. 
+- For example, a regular IPv4 address uses the 198.51.100.0 format, whereas a CIDR IP address would include the IP network prefix at the end of the address, 198.51.100.0/24.
+- This CIDR address encompasses all IP addresses between 198.51.100.0 and 198.51.100.255.
+- The system of CIDR addressing reduces the number of entries in routing tables and provides more available IP addresses within networks.
+- You can try converting CIDR to IPv4 addresses and vice versa through an online conversion tool, like [IPAddressGuide](https://www.ipaddressguide.com/cidr) , for practice and to better understand this concept.
+
+#### Security benefits of subnetting :
+
+- Subnetting allows network professionals and analysts to create a network within their own network without requesting another network IP address from their internet service provider.
+- This process uses network bandwidth more efficiently and improves network performance.
+- Subnetting is one component of creating isolated subnetworks through physical isolation, routing configuration, and firewalls.
+
+## Proxy Servers :
+- A server that fulfills the requests of a client by forwarding them on to other servers.
+
+1. Forward Proxy Server ;
+   - Regulates and restricts a person's access to the internet.
+2. Reverse Proxy servers :
+   - Regulates and restricts the internet's access to an internal server.
+3. Email Proxy Server :
+   - Filters span email.
+  
+## Virtual Networks and Privacy :
+
+#### Common network protocols  
+- Network protocols are used to direct traffic to the correct device and service depending on the kind of communication being performed by the devices on the network.
+- Protocols are the rules used by all network devices that provide a mutually agreed upon foundation for how to transfer data across a network.
+
+- There are three main categories of network protocols: communication protocols, management protocols, and security protocols. 
+
+**Communication protocols** are used to establish connections between servers. Examples include TCP, UDP, and Simple Mail Transfer Protocol (SMTP), which provides a framework for email communication. 
+
+**Management protocols** are used to troubleshoot network issues. One example is the Internet Control Message Protocol (ICMP).
+
+**Security protocols** provide encryption for data in transit. Examples include IPSec and SSL/TLS.
+
+#### Some other commonly used protocols are:
+
+1. HyperText Transfer Protocol (HTTP). HTTP is an application layer communication protocol. This allows the browser and the web server to communicate with one another. 
+
+2. Domain Name System (DNS). DNS is an application layer protocol that translates, or maps, host names to IP addresses.
+
+3. Address Resolution Protocol (ARP). ARP is a network layer communication protocol that maps IP addresses to physical machines or a MAC address recognized on the local area network.
+
+### Wi-Fi :
+This section of the course also introduced various wireless security protocols, including WEP, WPA, WPA2, and WPA3. WPA3 encrypts traffic with the Advanced Encryption Standard (AES) cipher as it travels from your device to the wireless access point. WPA2 and WPA3 offer two modes: personal and enterprise. Personal mode is best suited for home networks while enterprise mode is generally utilized for business networks and applications.
+
+## Network security tools and practices :
+
+### Firewalls :
+
+- Previously, you learned that firewalls are network virtual appliances (NVAs) or hardware devices that inspect and can filter network traffic before it’s permitted to enter the private network.
+- Traditional firewalls are configured with rules that tell it what types of data packets are allowed based on the port number and IP address of the data packet.
+
+- There are two main categories of firewalls :
+   1. **Stateless**: A class of firewall that operates based on predefined rules and does not keep track of information from data packets
+   2. **Stateful**: A class of firewall that keeps track of information passing through it and proactively filters out threats. Unlike stateless firewalls, which require rules to be configured in two directions, a stateful firewall only requires a rule in one direction. This is because it uses a "state table" to track connections, so it can match return traffic to an existing session
+ 
+`**Next generation firewalls (NGFWs)**` are the most technologically advanced firewall protection. 
+- They exceed the security offered by stateful firewalls because they include deep packet inspection (a kind of packet sniffing that examines data packets and takes actions if threats exist) and intrusion prevention features that detect security threats and notify firewall administrators.
+- NGFWs can inspect traffic at the application layer of the TCP/IP model and are typically application aware.
+- Unlike traditional firewalls that block traffic based on IP address and ports, NGFWs rules can be configured to block or allow traffic based on the application.
+- Some NGFWs have additional features like Malware Sandboxing, Network Anti-Virus, and URL and DNS Filtering.
+
+### Proxy servers  :
+
+- A proxy server is another way to add security to your private network.
+- Proxy servers utilize network address translation (NAT) to serve as a barrier between clients on the network and external threats. Forward proxies handle queries from internal clients when they access resources external to the network.
+- Reverse proxies function opposite of forward proxies; they handle requests from external systems to services on the internal network.
+- Some proxy servers can also be configured with rules, like a firewall.
+- For example, you can create filters to block websites identified as containing malware.
+
+### Virtual Private Networks (VPN) :
+
+- A VPN is a service that encrypts data in transit and disguises your IP address.
+- VPNs use a process called encapsulation.
+- Encapsulation wraps your unencrypted data in an encrypted data packet, which allows your data to be sent across the public network while remaining anonymous.
+- Enterprises and other organizations use VPNs to help protect communications from users’ devices to corporate resources.
+- Some of these resources include servers or virtual machines that host business applications.
+- Individuals also use VPNs to increase personal privacy.
+- VPNs protect user privacy by concealing personal information, including IP addresses, from external servers.
+- A reputable VPN also minimizes its own access to user internet activity by using strong encryption and other security measures.
+- Organizations are increasingly using a combination of VPN and SD-WAN capabilities to secure their networks.
+
+- **A software-defined wide area network (SD-WAN)** is a virtual WAN service that allows organizations to securely connect users to applications across multiple locations and over large geographical distances.
+
+### VPN protocols: Wireguard and IPSec :
+
+- A VPN, or virtual private network, is a network security service that changes your public IP address and hides your virtual location so that you can keep your data private when you’re using a public network like the internet.
+- VPNs provide a server that acts as a gateway between a computer and the internet.
+- This server creates a path similar to a virtual tunnel that hides the computer’s IP address and encrypts the data in transit to the internet.
+- The main purpose of a VPN is to create a secure connection between a computer and a network.
+- Additionally, a VPN allows trusted connections to be established on non-trusted networks.
+- VPN protocols determine how the secure network tunnel is formed.
+- Different VPN providers provide different VPN protocols.
+
+- A VPN protocol is similar to a network protocol -- It’s a set of rules or instructions that will determine how data moves between endpoints.
+- An endpoint is any device connected on a network.
+- Some examples of endpoints include computers, mobile devices, and servers.
+
+#### Remote access and site-to-site VPNs :
+
+- Individual users use remote access VPNs to establish a connection between a personal device and a VPN server.
+- Remote access VPNs encrypt data sent or received through a personal device.
+- The connection between the user and the remote access VPN is established through the internet.
+
+- Enterprises use site-to-site VPNs largely to extend their network to other networks and locations.
+- This is particularly useful for organizations that have many offices across the globe.
+- `**IPSec**` is commonly used in site-to-site VPNs to create an encrypted tunnel between the primary network and the remote network.
+- One disadvantage of site-to-site VPNs is how complex they can be to configure and manage compared to remote VPNs.
+
+### WireGuard VPN vs. IPSec VPN :
+
+- WireGuard and IPSec are two different VPN protocols used to encrypt traffic over a secure network tunnel.
+- The majority of VPN providers offer a variety of options for VPN protocols, such as WireGuard or IPSec.
+- Ultimately, choosing between IPSec and WireGuard depends on many factors, including connection speeds, compatibility with existing network infrastructure, and business or individual needs.
+
+#### WireGuard VPN :
+
+- WireGuard is a high-speed VPN protocol, with advanced encryption, to protect users when they are accessing the internet.
+- It’s designed to be simple to set up and maintain.
+- WireGuard can be used for both site-to-site connection and client-server connections.
+- WireGuard is relatively newer than IPSec, and is used by many people due to the fact that its download speed is enhanced by using fewer lines of code.
+- WireGuard is also open source, which makes it easier for users to deploy and debug.
+- This protocol is useful for processes that require faster download speeds, such as streaming video content or downloading large files.
+
+#### IPSec VPN : 
+
+- IPSec is another VPN protocol that may be used to set up VPNs.
+- Most VPN providers use IPSec to encrypt and authenticate data packets in order to establish secure, encrypted connections.
+- Since IPSec is one of the earlier VPN protocols, many operating systems support IPSec from VPN providers.
+
+- Although IPSec and WireGuard are both VPN protocols, IPSec is older and more complex than WireGuard.
+- Some clients may prefer IPSec due to its longer history of use, extensive security testing, and widespread adoption.
+- However, others may prefer WireGuard because of its potential for better performance and simpler configuration.
 
