@@ -297,4 +297,3 @@ After the work is done by the hardware, it sends the output back through the ope
 - This could be helpful if there were issues using the playbook and you had to review the steps you performed in the command line.
 
 - Additionally, if you suspect an attacker has compromised your system, you might be able to trace their actions using the history file.
-
