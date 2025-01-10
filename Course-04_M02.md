@@ -118,3 +118,80 @@
 - CentOS used source code published by Red Hat to provide a similar platform.
 - AlmaLinux is designed to be a drop-in replacement for CentOS 8.
 - This ensures that applications and configurations that worked on CentOS will continue to function on AlmaLinux. 
+
+## Package managers for installing applications :
+
+### Introduction to package managers :
+- A package is a piece of software that can be combined with other packages to form an application.
+- Some packages may be large enough to form applications on their own. 
+- Packages contain the files necessary for an application to be installed.
+- These files include dependencies, which are supplemental files used to run an application. 
+
+- Package managers can help resolve any issues with dependencies and perform other management tasks.
+- A package manager is a tool that helps users install, manage, and remove packages or applications.
+- Linux uses multiple package managers. 
+
+> Note: It’s important to use the most recent version of a package when possible.
+> The most recent version has the most up-to-date bug fixes and security patches.
+> These help keep your system more secure.
+
+### Types of package managers :
+- Many commonly used Linux distributions are derived from the same parent distribution.
+- For example, KALI LINUX ™, Ubuntu, and Parrot all come from Debian. CentOS comes from Red Hat.
+
+- This knowledge is useful when installing applications because certain package managers work with certain distributions.
+- For example, the Red Hat Package Manager (RPM) can be used for Linux distributions derived from Red Hat, and package managers such as dpkg can be used for Linux distributions derived from Debian.
+
+- Different package managers typically use different file extensions.
+- For example, Red Hat Package Manager (RPM) has files which use the `.rpm` file extension, such as `Package-Version-Release_Architecture.rpm`.
+- Package managers for Debian-derived Linux distributions, such as `dpkg`, have files which use the `.deb` file extension, such as `Package_Version-Release_Architecture.deb`.
+
+### Package management tools :
+- In addition to package managers like RPM and dpkg, there are also package management tools that allow you to easily work with packages through the shell.
+- Package management tools are sometimes utilized instead of package managers because they allow users to more easily perform basic tasks, such as installing a new package.
+- Two notable tools are the `Advanced Package Tool (APT)` and `Yellowdog Updater Modified (YUM)`.
+
+**1. Advanced Package Tool (APT) :** 
+- APT is a tool used with Debian-derived distributions.
+- It is run from the command-line interface to manage, search, and install packages.
+
+**2. Yellowdog Updater Modified (YUM) :**
+- YUM is a tool used with Red Hat-derived distributions.
+- It is run from the command-line interface to manage, search, and install packages.
+- YUM works with .rpm files.
+
+## The Shell :
+
+- it is a command line interpreter
+- it communicates with the kernel to execute these commands
+
+### Types of shells :
+- The many different types of Linux shells include the following:
+  1. Bourne-Again Shell (bash)
+  2. C Shell (csh)
+  3. Korn Shell (ksh)
+  4. Enhanced C shell (tcsh)
+  5. Z Shell (zsh)
+
+- All Linux shells use common Linux commands, but they can differ in other features.
+- For example, ksh and bash use the dollar sign `$` to indicate where users type in their commands.
+- Other shells, such as zsh, use the percent sign `%` for this purpose.
+
+### Bash
+- Bash is the default shell in most Linux distributions.
+- It’s considered a user-friendly shell.
+- You can use bash for basic Linux commands as well as larger projects.
+
+- Bash is also the most popular shell in the cybersecurity profession.
+
+### Input and Output in the shell :
+
+- **Standard input** is the information recieved by the OS via the command line.
+- `echo` is the linux command that outputs a specified string of text.
+- **Standard Output** is the information returned by the OS through the shell.
+- **Standard error** is error message returned by the OS through the shell.
+- Output for `echo` :
+![image](https://github.com/user-attachments/assets/faa85281-b665-4b48-a9e8-5ab83d5102dc)
+
+
+
