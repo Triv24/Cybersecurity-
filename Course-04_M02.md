@@ -23,7 +23,9 @@
 - **Applications** --  a program that performs a specific task [eg. Nano]
 > Nano is a text editor
 > Linux applications are commonly distributed through package managers.
+> 
 > A **package manager** is a tool that helps users install, manage, and remove packages or applications.
+> 
 > A **package** is a piece of software that can be combined with other packages to form an application.
 - **Shell** - it is command line interpreter
 - **Filesystem Hierarchy Standard** - organises data. It is a way to organise data so that it can be found when the data is accessed by the system.
@@ -192,6 +194,7 @@
 - **Standard Output** is the information returned by the OS through the shell.
 - **Standard error** is error message returned by the OS through the shell.
 - Output for `echo` :
+  
 ![image](https://github.com/user-attachments/assets/faa85281-b665-4b48-a9e8-5ab83d5102dc)
 
 
