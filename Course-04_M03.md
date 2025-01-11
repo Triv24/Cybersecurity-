@@ -122,4 +122,52 @@ Directly below the root directory, you’ll find standard FHS directories. In th
 
 **Piping : `|`**
 - Sends the standard output of one command as standard input to another command for further processing.
-- 
+
+- When used with grep, the pipe can help you find directories and files containing a specific word in their names.
+   - For example, `ls /home/analyst/reports | grep users` returns the file and directory names in the reports directory that contain users.
+   - Before the pipe, ls indicates to list the names of the files and directories in reports.
+   - Then, it sends this output to the command after the pipe.
+   - In this case, grep users returns all of the file or directory names containing users from the input it received.
+
+> **Note:** Piping is a general form of redirection in Linux and can be used for multiple tasks other than filtering.
+>
+> You can think of piping as a general tool that you can use whenever you want the output of one command to become the input of another command.
+
+**2. `find :`** searches for directories and files that meet specified criteria. 
+   - There’s a wide range of criteria that can be specified with find.
+   - For example, you can search for files and directories that :
+        - Contain a specific string in the name
+        - Are a certain file size
+        - Were last modified within a certain time frame
+   - When using find, the first argument after find indicates where to start searching.
+   - For example, entering find /home/analyst/projects searches for everything starting at the projects directory.
+   - After this first argument, you need to indicate your criteria for the search.
+   - If you don’t include a specific search criteria with your second argument, your search will likely return a lot of directories and files.
+   - Specifying criteria involves options. Options modify the behavior of a command and commonly begin with a hyphen (-). 
+
+**a) `-name` and `-iname` :**
+   - One key criteria analysts might use with find is to find file or directory names that contain a specific string.
+   - The specific string you’re searching for must be entered in quotes after the -name or -iname options.
+   - The difference between these two options is that -name is case-sensitive, and -iname is not. 
+
+   - For example, you might want to find all files in the projects directory that contain the word “log” in the file name.
+   - To do this, you’d enter find /home/analyst/projects -name `"*log*"`.
+   - You could also enter find /home/analyst/projects -iname `"*log*"`.
+         
+   - In these examples, the output would be all files in the projects directory that contain log surrounded by zero or more characters.
+   - The `"*log*"` portion of the command is the search criteria that indicates to search for the string “log”.
+   - When `-name` is the option, files with names that include Log or LOG, for example, wouldn’t be returned because this option is case-sensitive.
+   - However, they would be returned when `-iname` is the option.
+         
+> **Note:** An asterisk `*` is used as a wildcard to represent zero or more unknown characters.
+
+
+**b) `-mtime` :**
+   - Security analysts might also use find to find files or directories last modified within a certain time frame. 
+   - The `-mtime` option can be used for this search. 
+   - For example, entering `find /home/analyst/projects -mtime -3` returns all files and directories in the projects directory that have been modified within the past three days. 
+
+   - The `-mtime` option search is based on days, so entering `-mtime +1` indicates all files or directories last modified more than one day ago, and entering `-mtime -1` indicates all files or directories last modified less than one day ago. 
+         
+> **Note:** The option `-mmin` can be used instead of `-mtime` if you want to base the search on minutes rather than days.
+      
