@@ -110,7 +110,16 @@ Directly below the root directory, you’ll find standard FHS directories. In th
 - For example, `/home/analyst/projects` is an absolute file path.
 - The relative file path is the file path that starts from a user's current directory.
 
-> Note: Relative file paths can use a dot (.) to represent the current directory, or two dots (..) to represent the parent of the current directory.
+> Note: Relative file paths can use a dot `.` to represent the current directory, or two dots `..` to represent the parent of the current directory.
 > 
 > An example of a relative file path could be ../projects.
 
+## Find what you Need with Linux :
+
+**1. `grep` :** searches a specified file and returns all lines in the file containing a specified string.
+   - [example] : `grep "os" updates.txt` : 1st arguements is the string to be searched, 2nd arguement is the file through which we have to search.
+
+
+**Piping : `|`**
+- Sends the standard output of one command as standard input to another command for further processing.
+- 
