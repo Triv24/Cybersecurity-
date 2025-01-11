@@ -27,8 +27,9 @@
 > A **package** is a piece of software that can be combined with other packages to form an application.
 - **Shell** - it is command line interpreter
 - **Filesystem Hierarchy Standard** - organises data. It is a way to organise data so that it can be found when the data is accessed by the system.
-- A **directory** is a file that organizes where other files are stored.
-- Directories are sometimes called “**folders**,” and they can contain files or other directories. The FHS defines how directories, directory contents, and other storage is organized so the operating system knows where to find specific data. 
+  - A **directory** is a file that organizes where other files are stored.
+  - Directories are sometimes called “**folders**,” and they can contain files or other directories.
+  - The FHS defines how directories, directory contents, and other storage is organized so the operating system knows where to find specific data. 
 - **Kernel** - manages processes and memory.
   - communicates with hardware to execute commands sent by the shell.
   - The kernel uses drivers to enable applications to execute tasks.
