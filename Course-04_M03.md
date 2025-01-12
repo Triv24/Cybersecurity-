@@ -171,3 +171,13 @@ Directly below the root directory, you’ll find standard FHS directories. In th
          
 > **Note:** The option `-mmin` can be used instead of `-mtime` if you want to base the search on minutes rather than days.
       
+### Create and Modify directories :
+
+#### Commands :
+
+1. `mkdir` : Creates a new directory.
+2. `rmdir` : Removes, or deletes a directory.
+3. `touch` : Creates a new file.
+4. `rm` : Removes or deletes a file.
+5. `mv` : Moves a file or directory to a new location.
+6. `cp` : Copies a file/directory to a new location.
