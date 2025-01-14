@@ -222,3 +222,57 @@ Directly below the root directory, you’ll find standard FHS directories. In th
 - The `>` operator should be used carefully, because it’s not easy to recover overwritten files.
 
 - When you’re inside the directory containing the permissions.txt file, entering `echo "last updated date" >> permissions.txt` adds the string “last updated date” to the file contents. Entering `echo "time" > permissions.txt` after this command overwrites the entire file contents of permissions.txt with the string “time”.
+
+## File permissions and Ownership :
+- Permissions are the type of access granted for a file or directory.
+- Permissions are related to authorization.
+- Authorization is the concept of granting access to specific resources in a system.
+- Authorization allows you to limit access to specified files or directories.
+- A good rule to follow is that data access is on a need-to-know basis.
+- You can imagine the security risk it would impose if anyone could access or modify anything they wanted to on a system.
+
+- There are three types of permissions in Linux that an authorized user can have :
+   1. **Read** : On a file, read permissions means contents on the file can be read.
+      - On a directory, this permission means you can read all files in that directory.
+   2. **Write** : Write permissions on a file allow modifications of contents of the file.
+      - On a directory, write permissions indicate that new files can be created in that directory.    3. **Execute** : Execute permissions on files mean that the file can be executed if it's an executable file.
+      - Execute permissions on directories allow users to enter into a directory and access its files.
+     
+- Permissions are granted by 3 different types of Owners :
+  1. **User** -- Owner of the file
+      - When you create a file, you become the owner of the file.
+      - But the ownership can be changed.
+  2. **Group** -- Every user is a part of a certain group.
+      - A group consists of several users, and this is one way to manage a multi-user environment.
+  3. **Other** -- Other can be considered all other users on the system.
+ 
+- In Linux, file permissions are represented with a 10-character string. For a directory with full permissions for the user group, this string would be: drwxrwxrwx.
+
+![image](https://github.com/user-attachments/assets/fbcf335c-2e8c-4435-a24c-e0aa80a0364c)
+- Here in the above 10-char string -- `d` denotes that it is a directory.
+- if there was a `-` instead, it denotes a regular file.
+
+![image](https://github.com/user-attachments/assets/bba5fd38-e31f-45aa-94ae-cfb8e80b592d)
+- the first block of rwx defines the permissions for users. [(r - read),(w - write),(x - execute)]
+- if any permission is not granted, then that char contains a `-` instead.
+
+![image](https://github.com/user-attachments/assets/ebc20176-3828-492d-be95-725f8d766e58)
+- Second block of rwx defines the permissions for a group
+  
+![image](https://github.com/user-attachments/assets/1707efc6-cf87-4b76-bfa9-a8b794ece496)
+- third block of rwx indicates the permissions for the owner type - Other.
+
+> Ensuring files and directories are set with their appropriate access permissions is critical to protecting sensitive files and maintaining the overall security of a system.
+
+> **World-writable files** can pose significant security risks.
+>
+> World-writable files are those which contain write permissions for all types of owners.
+
+### Options :
+![image](https://github.com/user-attachments/assets/b82db3c4-6e18-486f-ab03-0c9f7960a4e4)
+
+- the options for a command can be a single letter or a full-word.
+
+![image](https://github.com/user-attachments/assets/1f1e52d9-2ae7-45d0-a4c5-b59b9accdff3)![image](https://github.com/user-attachments/assets/9dba1e6e-2e3d-4d28-807c-1b92b2350e9c)![image](https://github.com/user-attachments/assets/ac4c64a7-9d9c-4b4f-a246-01643a389e6a)
+![image](https://github.com/user-attachments/assets/a70de782-648f-45ff-9094-0a47c96290cd)
+
