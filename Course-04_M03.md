@@ -312,3 +312,12 @@ Directly below the root directory, you’ll find standard FHS directories. In th
 
 - To remedy the situation, you input `chmod g-rw bonuses.txt`.
 - Now, only the user who needs to access this file to carry out their job responsibilities can access this file.
+
+## Add and Delete Users :
+
+### Root Users (Super user) :
+- A root user is the user with elevated privileges to modify the system.
+- Individuals who need to perform specific tasks can be temporarily added as root users.
+- Root users can create, modify, delete and run any program.
+- Only root users or accounts with root privileges can add new users.
+  ![image](https://github.com/user-attachments/assets/e60ca3ff-df19-4846-a511-4faff5779c67)
