@@ -276,3 +276,39 @@ Directly below the root directory, you’ll find standard FHS directories. In th
 ![image](https://github.com/user-attachments/assets/1f1e52d9-2ae7-45d0-a4c5-b59b9accdff3)![image](https://github.com/user-attachments/assets/9dba1e6e-2e3d-4d28-807c-1b92b2350e9c)![image](https://github.com/user-attachments/assets/ac4c64a7-9d9c-4b4f-a246-01643a389e6a)
 ![image](https://github.com/user-attachments/assets/a70de782-648f-45ff-9094-0a47c96290cd)
 
+### Changing file permissions:
+
+#### **Using `chmod`** : 
+- `chmod` : Changes permissions to files and directories.
+   - `chmod` stands for 'change mode'.
+- The `chmod` command requires two arguments.
+- The first argument indicates how to change permissions
+- the second argument indicates the file or directory that you want to change permissions for. 
+- For example, the following command would add all permissions to login_sessions.txt:
+   - `chmod u+rwx,g+rwx,o+rwx login_sessions.txt`
+- If you wanted to take all the permissions away, you could use
+   - `chmod u-rwx,g-rwx,o-rwx login_sessions.txt`
+
+- Another way to assign these permissions is to use the equals sign `=` in this first argument.
+- Using `=` with chmod sets, or assigns, the permissions exactly as specified.
+- For example, the following command would set read permissions for login_sessions.txt for user, group, and other:
+   - `chmod u=r,g=r,o=r login_sessions.txt`
+
+- This command overwrites existing permissions.
+- For instance, if the user previously had write permissions, these write permissions are removed after you specify only read permissions with `=`. 
+
+   - ![image](https://github.com/user-attachments/assets/a2f3f098-b72c-410f-822c-e371070f1b1d)
+   - ![image](https://github.com/user-attachments/assets/ec75cc1e-9c43-4014-a2f7-3764268ff64c)
+
+#### The principle of least privilege in action :
+- As a security analyst, you may encounter a situation like this one:
+- There’s a file called `bonuses.txt` within a compensation directory.
+- The owner of this file is a member of the Human Resources department with a username of hrrep1.
+- It has been decided that hrrep1 needs access to this file.
+- But, since this file contains confidential information, no one else in the hr group needs access.
+
+- You run `ls -l` to check the permissions of files in the compensation directory and discover that the permissions for `bonuses.txt` are `-rw-rw----`.
+- The group owner type has read and write permissions that do not align with the principle of least privilege.  
+
+- To remedy the situation, you input `chmod g-rw bonuses.txt`.
+- Now, only the user who needs to access this file to carry out their job responsibilities can access this file.
