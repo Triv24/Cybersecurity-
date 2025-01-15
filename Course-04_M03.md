@@ -342,4 +342,33 @@ Directly below the root directory, you’ll find standard FHS directories. In th
 - delete a user from the system
 - ![image](https://github.com/user-attachments/assets/113b7fdf-7b80-4e38-8dbb-d6636184513a)
 
+### Responsible use of sudo :
+- Previously, you explored authorization, authentication, and Linux commands with `sudo`, `useradd`, and `userdel`.
+- The `sudo` command is important for security analysts because it allows users to have elevated permissions without risking the system by running commands as the root user.
+- You’ll continue exploring authorization, authentication, and Linux commands in this reading and learn two more commands that can be used with sudo: `usermod` and `chown`.
 
+### Responsible use of sudo :
+- To manage authorization and authentication, you need to be a root user, or a user with elevated privileges to modify the system.
+- The root user can also be called the “super user.”
+- You become a root user by logging in as the root user.
+- However, running commands as the root user is not recommended in Linux because it can create security risks if malicious actors compromise that account.
+- It’s also easy to make irreversible mistakes, and the system can’t track who ran a command.
+- For these reasons, rather than logging in as the root user, it’s recommended you use sudo in Linux when you need elevated privileges.
+
+- The `sudo` command temporarily grants elevated permissions to specific users.
+- The name of this command comes from `super user do`.
+- Users must be given access in a configuration file to use sudo. This file is called the **sudoers file.**
+- Although using sudo is preferable to logging in as the root user, it's important to be aware that users with the elevated permissions to use sudo might be more at risk in the event of an attack.
+
+- You can compare this to a hotel with a master key.
+- The master key can be used to access any room in the hotel.
+- There are some workers at the hotel who need this key to perform their work.
+- For example, to clean all the rooms, the janitor would scan their ID badge and then use this master key.
+- However, if someone outside the hotel’s network gained access to the janitor’s ID badge and master key, they could access any room in the hotel.
+- In this example, the janitor with the master key represents a user using sudo for elevated privileges.
+- Because of the dangers of sudo, only users who really need to use it should have these permissions.
+
+- Additionally, even if you need access to sudo, you should be careful about using it with only the commands you need and nothing more.
+- Running commands with sudo allows users to bypass the typical security controls that are in place to prevent elevated access to an attacker.
+
+> **Note :** Be aware of sudo if copying commands from an online source. It’s important you don’t use sudo accidentally. 
