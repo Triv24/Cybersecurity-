@@ -321,3 +321,25 @@ Directly below the root directory, you’ll find standard FHS directories. In th
 - Root users can create, modify, delete and run any program.
 - Only root users or accounts with root privileges can add new users.
   ![image](https://github.com/user-attachments/assets/e60ca3ff-df19-4846-a511-4faff5779c67)
+
+
+- Problems logging in as a root user :
+   - Security risks
+   - Irreversible mistakes
+   - Accountability
+ 
+### `sudo` :
+- Temporarily grants elevated permissions to specific users.
+- stands for -- super-user-do
+
+### Commands :
+
+**1. `useradd` :**
+- Adds a user to the system.
+- ![image](https://github.com/user-attachments/assets/fb442544-bcdb-4932-8d08-df109e8aeda6)
+
+**2. `userdel` :**
+- delete a user from the system
+- ![image](https://github.com/user-attachments/assets/113b7fdf-7b80-4e38-8dbb-d6636184513a)
+
+
